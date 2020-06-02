@@ -29,31 +29,6 @@
       "nombre": "Rib Eye 1kg",
       "precio": 300,
       "id": 6
-    },
-    {
-      "nombre": "Prueba",
-      "precio": 1212,
-      "id": 7
-    },
-    {
-      "nombre": "Prueba",
-      "precio": 1212,
-      "id": 8
-    },
-    {
-      "nombre": "Prueba",
-      "precio": 1212,
-      "id": 9
-    },
-    {
-      "nombre": "Prueba",
-      "precio": 1212,
-      "id": 10
-    },
-    {
-      "nombre": "asdasd",
-      "precio": 1212,
-      "id": 11
     }
   ]
 }
