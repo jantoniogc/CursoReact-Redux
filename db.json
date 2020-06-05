@@ -3,12 +3,12 @@
     {
       "id": 1,
       "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
+      "precio": "3111"
     },
     {
       "id": 2,
       "nombre": "Jugo de Naranja",
-      "precio": "1"
+      "precio": "32"
     },
     {
       "nombre": "Jugo de Naranja",
@@ -29,6 +29,11 @@
       "nombre": "Rib Eye 1kg",
       "precio": 300,
       "id": 6
+    },
+    {
+      "nombre": "asdf",
+      "precio": 12121,
+      "id": 7
     }
   ]
 }

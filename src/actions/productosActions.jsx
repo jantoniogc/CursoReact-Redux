@@ -8,6 +8,10 @@ import {
   PRODUCTO_ELIMINAR,
   PRODUCTO_ELIMINAR_EXITO,
   PRODUCTO_ELIMINAR_ERROR,
+  PRODUCTO_EDITAR,
+  EDITAR_PRODUCTO,
+  EDITAR_PRODUCTO_EXITO,
+  EDITAR_PRODUCTO_ERROR
 } from '../types/index';
 
 import clienteAxios from '../config/axios';
@@ -118,3 +122,56 @@ const eliminarProductoError = (error) => ({
   type: PRODUCTO_ELIMINAR_ERROR,
   payload: error
 })
+
+
+const obtenerProductoEditar = (producto) => ({
+  type: PRODUCTO_EDITAR,
+  payload: producto
+});
+
+
+export function obtnerProductoEditarAction(producto) {
+  return (dispatch) => {
+    dispatch(obtenerProductoEditar(producto));
+  }
+}
+
+const editarProducto = (producto) => ({
+  type: EDITAR_PRODUCTO,
+  payload: producto
+});
+
+const editarProductoExito = (producto) => ({
+  type: EDITAR_PRODUCTO_EXITO,
+  payload: producto
+});
+
+const editarProductoError = (error) => ({
+  type: EDITAR_PRODUCTO_ERROR,
+  payload: error
+})
+
+export function editarProductoAction(producto) {
+  return async (dispatch) => {
+    dispatch(editarProducto(producto));
+    try {
+      const resultado = await clienteAxios.put(`/productos/${producto.id}`, producto)
+      dispatch(editarProductoExito(resultado.data));
+      Swal.fire(
+        'Actualizado!',
+        'El producto ha sido Actualizado.',
+        'success'
+      )
+
+    } catch (error) {
+      dispatch(editarProductoError(error.message))
+      Swal.fire({
+        icon: 'error',
+        title: 'Hubo un error',
+        text: error.message
+      })
+    }
+  }
+}
+
+
