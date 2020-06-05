@@ -59,10 +59,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ma
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+## Desplegar aplicación en local
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### 1. Arrancamos parte servidora 
+`json-server --watch db.json --port 4000`
+### 2. Arrancamos Aplicación
+`npm start`
